@@ -14,6 +14,7 @@ function solveEquation(a, b, c) {
     arr.push(x1, x2); // массив с двумя корнями
   return arr;
 }
+}
 
 function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (isNaN(Number(percent)) || isNaN(Number(contribution)) || isNaN(Number(amount)) || isNaN(Number(countMonths))) {
@@ -24,5 +25,5 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   let monthPercent = percent / 12;
   let monthlyPayment = bodyCredit * (monthPercent + monthPercent / ((1 + monthPercent)**countMonths - 1));
   let totalAmount = monthlyPayment * countMonths;
-  return Number(totalAmount.toFixed(2));}
+  return Number(totalAmount.toFixed(2));
 }
