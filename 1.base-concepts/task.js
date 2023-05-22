@@ -1,6 +1,6 @@
 "use strict"
 function solveEquation(a, b, c) {
-  let arr = [];
+  const arr = [];
   const d = b**2 - 4*a*c;
   if (d < 0) {
     return arr; // пустой массив
@@ -20,10 +20,10 @@ function calculateTotalMortgage(percent, contribution, amount, countMonths) {
   if (isNaN(Number(percent)) || isNaN(Number(contribution)) || isNaN(Number(amount)) || isNaN(Number(countMonths))) {
     return false;
   }
-  percent = Number(percent) / 100;
-  let bodyCredit = Number(amount) - Number(contribution);
-  let monthPercent = percent / 12;
-  let monthlyPayment = bodyCredit * (monthPercent + monthPercent / ((1 + monthPercent)**countMonths - 1));
-  let totalAmount = monthlyPayment * countMonths;
+  interestRate = Number(percent) / 100;
+  const bodyCredit = Number(amount) - Number(contribution);
+  const monthPercent = percent / 12;
+  const monthlyPayment = bodyCredit * (monthPercent + monthPercent / ((1 + monthPercent)**countMonths - 1));
+  const totalAmount = monthlyPayment * countMonths;
   return Number(totalAmount.toFixed(2));
 }
