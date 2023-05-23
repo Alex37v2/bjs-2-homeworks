@@ -6,7 +6,7 @@ function getArrayParams(...arr) {
   let avg = sum / arr.length;
   return { min: min, max: max, avg: Number(avg.toFixed(2))};
 }
-getArrayParams(5, 6, 47, 54, 32, 71, 28, 82, 176);
+// getArrayParams(5, 6, 47, 54, 32, 71, 28, 82, 176);
 
 function summElementsWorker(values) {
   if (!arr.length) return 0;
@@ -37,7 +37,7 @@ function differenceMaxMinWorker(...arr) {
 
   return max - min;
 }
-console.log(differenceMaxMinWorker(4, 2, 3, 1));
+// console.log(differenceMaxMinWorker(4, 2, 3, 1));
 
 function differenceEvenOddWorker(...arr) {
   if(arr.length === 0) {
@@ -56,7 +56,7 @@ function differenceEvenOddWorker(...arr) {
   }
   return sumEvenElement - sumOddElement;
 }
-console.log(differenceEvenOddWorker(4, 2, 3, 1));
+// console.log(differenceEvenOddWorker(4, 2, 3, 1));
 
 function averageEvenElementsWorker(...arr) {
   if(arr.length === 0) {
@@ -74,7 +74,7 @@ function averageEvenElementsWorker(...arr) {
   }
   return sumEvenElement / countEvenElement;
 }
-console.log(averageEvenElementsWorker(4, 2, 3, 1));
+// console.log(averageEvenElementsWorker(4, 2, 3, 1));
 
 const arr = [[10, 10, 11, 20, 10], [67, 10, 2, 39, 88], [72, 75, 51, 87, 43], [30, 41, 55, 96, 62]];
 
