@@ -14,14 +14,18 @@ Student.prototype.addMarks = function (...marks) {
 }
 
 Student.prototype.getAverage = function () {
-    return this.marks && this.marks.length ? this.marks.reduce((acc, cur) => acc + cur, 0) / this.marks.length : 0;
-}
-
-Student.prototype.exclude = function (reason) {
+    if (this.marks === undefined || this.marks.length === 0) {
+      return 0;
+    }
+    const sum = this.marks.reduce((acc, mark) => acc + mark, 0);
+    return sum / this.marks.length;
+  };
+  
+  Student.prototype.exclude = function (reason) {
     delete this.subject;
     delete this.marks;
-    this.exclude = reason;
-}
+    this.excluded = reason;
+  };
 
 let student1 = new Student("Василиса", "женский", 19);
 student1.setSubject("Algebra");
